@@ -10,6 +10,7 @@ public class ARCursor : MonoBehaviour
     public ARRaycastManager raycastManager;
 
     public bool useCursor = true;
+    bool objectPlaced = false; 
 
     void Start()
     {
@@ -19,26 +20,33 @@ public class ARCursor : MonoBehaviour
     
     void Update()
     {
-        if (useCursor == true)
+        if (useCursor == true && objectPlaced == false)
         {
             UpdateCursor();
         }
 
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (objectPlaced == true)
         {
-            if (useCursor == true)
+            cursorChildObject.SetActive(false); 
+        }
+
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && objectPlaced == false)
+        {
+            if (useCursor == true && objectPlaced == false)
             {
                 GameObject.Instantiate(objectToPlace, transform.position, transform.rotation);
+                objectPlaced = true;
             }
-            else
+           /* else
             {
                 List<ARRaycastHit> hits = new List<ARRaycastHit>();
                 raycastManager.Raycast(Input.GetTouch(0).position, hits, UnityEngine.XR.ARSubsystems.TrackableType.Planes);
-                if (hits.Count > 0)
+                if (hits.Count > 0 && objectPlaced == false)
                 {
                     GameObject.Instantiate(objectToPlace, hits[0].pose.position, hits[0].pose.rotation);
+                    //objectPlaced = true;
                 }
-            }
+            }*/
         }
     }
 
