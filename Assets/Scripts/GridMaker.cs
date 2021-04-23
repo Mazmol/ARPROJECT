@@ -18,8 +18,8 @@ public class GridMaker : MonoBehaviour
     //Grid Size
     public int width;
     public int height;
-    public int offset; //distance to middle of the grid square.
-    public int spacing; //distance between squares in units.
+    public float offset; //distance to middle of the grid square.
+    public float spacing; //distance between squares in units.
 
     private int[] level;
 
