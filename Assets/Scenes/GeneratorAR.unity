@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorChildObject: {fileID: 1769971751}
-  objectToPlace: {fileID: 2066396791287804232, guid: fa645961a38f2d04390fbf5b013bd427,
+  objectToPlace: {fileID: 3559834660076232475, guid: af47623800f57d74f9d6f1424041768d,
     type: 3}
   raycastManager: {fileID: 1395779382}
   useCursor: 1
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlanePrefab: {fileID: 0}
-  m_DetectionMode: -1
+  m_DetectionMode: 1
 --- !u!114 &1395779382
 MonoBehaviour:
   m_ObjectHideFlags: 0
