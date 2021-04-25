@@ -22,6 +22,7 @@ public class TurrentManger : MonoBehaviour
            
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
+            
 
             if (Physics.Raycast(ray, out hit,500f,clickMask)) {
                clickPostion = hit.point;
@@ -45,3 +46,4 @@ public class TurrentManger : MonoBehaviour
         }
     }
 }
+             
