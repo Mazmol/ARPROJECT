@@ -10,6 +10,7 @@ public class ARCursor : MonoBehaviour
     public ARRaycastManager raycastManager;
 
     public bool useCursor = true;
+    bool gameStarted = false; 
     bool objectPlaced = false; 
 
     void Start()
@@ -17,6 +18,11 @@ public class ARCursor : MonoBehaviour
         cursorChildObject.SetActive(useCursor);
     }
 
+    void MoveGame()
+    {
+        objectPlaced = false;
+        objectToPlace.SetActive(false);
+    }
     
     void Update()
     {
@@ -29,13 +35,18 @@ public class ARCursor : MonoBehaviour
         {
             cursorChildObject.SetActive(false); 
         }
+        else
+        {
+            cursorChildObject.SetActive(true); 
+        }
 
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && objectPlaced == false)
         {
-            if (useCursor == true && objectPlaced == false)
+            if (useCursor == true && objectPlaced == false && gameStarted == false)
             {
                 GameObject.Instantiate(objectToPlace, transform.position, transform.rotation);
                 objectPlaced = true;
+                gameStarted = true; 
             }
            /* else
             {
@@ -47,6 +58,12 @@ public class ARCursor : MonoBehaviour
                     //objectPlaced = true;
                 }
             }*/
+           if (useCursor == true && objectPlaced == false && gameStarted == true)
+           {
+                objectToPlace.transform.position = transform.position;
+                objectToPlace.transform.rotation = transform.rotation;
+                objectToPlace.SetActive(true); 
+           }
         }
     }
 

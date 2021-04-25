@@ -53,5 +53,5 @@ MonoBehaviour:
   width: 10
   height: 10
   offset: 5
-  spacing: 1
-  scale: 0.05
+  spacing: 10
+  scale: 0.01
