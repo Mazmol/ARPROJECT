@@ -6,12 +6,14 @@ public class StartMenu : MonoBehaviour
 {
     public void NewGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log("Loading 2");
     }
 
     public void LoadGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        Debug.Log("Loading 1");
     }
 
     public void ExitGame()
