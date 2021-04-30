@@ -466,13 +466,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1205708168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d879932ba6b376f449732eb2b4b26cb7, type: 3}
+  m_Script: {fileID: 11500000, guid: cc563f17b21cdf04c84b0e925082b786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fool: {fileID: 5285255596199946894, guid: 4ad6f1e3a992e6c4fa5c05f1b0066518, type: 3}
   path: []
   startEnd: 
   size: 
+  maxLoops: 10000
+  Enemy: {fileID: 5285255596199946894, guid: 4ad6f1e3a992e6c4fa5c05f1b0066518, type: 3}
+  WaveForecast: 0500000005000000
+  currWave: 0
+  EnemyList: []
+  spawnInterval: 5
+  timer: 0
 --- !u!4 &1205708170
 Transform:
   m_ObjectHideFlags: 0

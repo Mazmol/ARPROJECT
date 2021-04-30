@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9017994743332040576}
   - component: {fileID: 2713806244544340615}
   - component: {fileID: 7239351978341163557}
+  - component: {fileID: 1517140824642092540}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5285255596199946894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,3 +97,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &1517140824642092540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5285255596199946894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ca9f7fb85ee2c4e97a0f277284a540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 1
+  destinationFound: 0
+  speed: 5
+  HP: 10
+  flying: 0
+  alive: 1
