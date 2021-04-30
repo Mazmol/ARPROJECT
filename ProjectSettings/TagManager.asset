@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Grid
   - Wall
+  - enemy
   layers:
   - Default
   - TransparentFX

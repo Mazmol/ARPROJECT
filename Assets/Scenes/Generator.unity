@@ -1095,4 +1095,4 @@ MonoBehaviour:
   clickMask:
     serializedVersion: 2
     m_Bits: 64
-  prefab: {fileID: 3559834660076232475, guid: af47623800f57d74f9d6f1424041768d, type: 3}
+  prefab: {fileID: 5580989646719992551, guid: 19a5ffaa530a39742a14ad0ce54d1e1b, type: 3}
