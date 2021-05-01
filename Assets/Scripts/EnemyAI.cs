@@ -39,6 +39,11 @@ public class EnemyAI : MonoBehaviour
         
     }
 
+    public void TakeDamage(int damage)
+    {
+        HP = HP - damage;
+    }
+
     public void SetTarget(Vector3 target)
     {
         TargetLocation = target;
