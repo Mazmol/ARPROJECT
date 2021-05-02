@@ -112,6 +112,6 @@ MonoBehaviour:
   Index: 1
   destinationFound: 0
   speed: 5
-  HP: 10
+  HP: 11
   flying: 0
   alive: 1

@@ -96,6 +96,7 @@ public class EmergencyPathfinder : MonoBehaviour
                 if(Ai.destinationFound && Ai.Index == path.Count-1)
                 {
                     Ai.HP = -1;
+                    //GetComponent<HP_Manger>{}.takeDamage(1);
                 }
 
                 Ai.SetTarget(path[Ai.Index].transform.position);
