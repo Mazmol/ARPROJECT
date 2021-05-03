@@ -19,7 +19,8 @@ public class EmergencyPathfinder : MonoBehaviour
 
     //Enemy Variables
     public GameObject Enemy;
-    public int[] WaveForecast;
+    public GameObject[] EnemyTypes; //0 = normal. 1 = Speedy. 2 = STRONK. 3 is the alien if it works.;
+    public int[] WaveForecast; //Each int is a wave with how many enemies.
     public int currWave = 0;
     public List<GameObject> EnemyList;
 
@@ -65,7 +66,22 @@ public class EmergencyPathfinder : MonoBehaviour
             
             if (EnemiesSpawned < WaveForecast[currWave] && canSpawn)
             {
-                GameObject enemy = Instantiate(Enemy, path[0].transform.position, Quaternion.identity, transform);
+                GameObject enemy;
+
+                if (EnemiesSpawned > (WaveForecast[currWave] / 2) && EnemiesSpawned+1 != WaveForecast[currWave])
+                {
+                    enemy = Instantiate(EnemyTypes[1], path[0].transform.position, Quaternion.identity, transform);
+                }
+
+                else if (EnemiesSpawned+1 == WaveForecast[currWave])
+                {
+                     enemy = Instantiate(EnemyTypes[2], path[0].transform.position, Quaternion.identity, transform);
+                }
+
+                else
+                {
+                    enemy = Instantiate(EnemyTypes[0], path[0].transform.position, Quaternion.identity, transform);
+                }
                 
                 EnemyList.Add(enemy);
                 EnemiesSpawned++;
@@ -96,14 +112,14 @@ public class EmergencyPathfinder : MonoBehaviour
                 if(Ai.destinationFound && Ai.Index == path.Count-1)
                 {
                     Ai.HP = -1;
-                    //GetComponent<HP_Manger>{}.takeDamage(1);
+                    GetComponent<HP_Manger>().takeDamage(1);
                 }
 
                 Ai.SetTarget(path[Ai.Index].transform.position);
 
             }
-            
-            if( timer > spawnInterval)
+
+            if (timer > spawnInterval && canSpawn == false)
             {
                 timer = 0;
                 canSpawn = true;

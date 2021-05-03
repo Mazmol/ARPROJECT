@@ -5955,7 +5955,11 @@ MonoBehaviour:
   startEnd: 
   size: 
   maxLoops: 10000
-  Enemy: {fileID: 5285255596199946894, guid: 4ad6f1e3a992e6c4fa5c05f1b0066518, type: 3}
+  Enemy: {fileID: 5595854264085077166, guid: 1bc31bb0dd7a0dd4ea0ab485b227b422, type: 3}
+  EnemyTypes:
+  - {fileID: 5595854264085077166, guid: 1bc31bb0dd7a0dd4ea0ab485b227b422, type: 3}
+  - {fileID: 5163296964699021206, guid: f239c48abc303a14da4d592092e22371, type: 3}
+  - {fileID: 3327275712828193578, guid: b881e5895d7e2834cb89c78aa6c9d480, type: 3}
   WaveForecast: 0500000005000000
   currWave: 0
   EnemyList: []
@@ -5988,7 +5992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamelost: 0
-  hp: 0
+  hp: 10
 --- !u!1 &1264953211
 GameObject:
   m_ObjectHideFlags: 0
@@ -10312,7 +10316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plane: {fileID: 2350240900969152899, guid: 82b464d9aacc1de4da0b957c2ee0490c, type: 3}
   wall: {fileID: 5634039061813857708, guid: 4e41eb68985d5404aadd09f76330f788, type: 3}
-  borderwall: {fileID: 3559834660076232475, guid: af47623800f57d74f9d6f1424041768d,
+  borderwall: {fileID: 3253383530860736339, guid: 5fee1a6510241974897b9c66ff6e67dc,
     type: 3}
   lStart: {fileID: 4631771679570084192, guid: 8a7acb2ea7604fb499a25e7012e02ca4, type: 3}
   lEnd: {fileID: 2155209083602524950, guid: f44f925d986474f43a2bc8e90f8eddf4, type: 3}
@@ -10321,7 +10325,8 @@ MonoBehaviour:
   height: 10
   offset: 5
   spacing: 10
-  scale: 1
+  level: 
+  scale: 0.1
 --- !u!4 &1944621527
 Transform:
   m_ObjectHideFlags: 0

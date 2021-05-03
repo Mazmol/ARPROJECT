@@ -21,9 +21,10 @@ public class GridMaker : MonoBehaviour
     public float offset; //distance to middle of the grid square.
     public float spacing; //distance between squares in units.
 
-    private int[] level;
 
-    public float scale = 1; //1 is 1x, 2 is 2x, ect.
+
+    public int[] level;
+public float scale = 1; //1 is 1x, 2 is 2x, ect.
 
     public GameObject[,] gridAxis;
 
@@ -35,7 +36,8 @@ public class GridMaker : MonoBehaviour
         //0 floor.
         //1 Wall.
         //2 + 3 is Start + End
-        level = new int[] 
+
+       level = new int[]
        {0,0,1,2,1,0,0,0,0,0,
         0,0,1,0,1,0,0,0,0,0,
         0,0,1,0,1,1,1,1,1,0,
@@ -46,6 +48,7 @@ public class GridMaker : MonoBehaviour
         0,0,0,0,0,0,1,0,1,0,
         0,0,0,0,1,1,1,0,1,0,
         0,0,0,0,1,3,0,0,1,0};
+
 
         pathfindingEssentials = new int[4];
 
@@ -166,5 +169,5 @@ public class GridMaker : MonoBehaviour
         }
     }
 
- 
+  
 }

@@ -27,7 +27,7 @@ public class HP_Manger : MonoBehaviour
     public void takeDamage(int hp)
     {
         this.hp = this.hp - hp ;
-        if (this.hp<0){
+        if (this.hp<=0){
              gamelost = true;
         }
     }

@@ -9,9 +9,11 @@ public class EnemyAI : MonoBehaviour
     public bool destinationFound;
     public float speed = 1;
 
-    public int HP = 10;
+    public float HP = 10;
     public bool flying = false;
     public bool alive = true;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +25,12 @@ public class EnemyAI : MonoBehaviour
     {
         if (!destinationFound )
         {
+            transform.LookAt(TargetLocation);
             float distance = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, TargetLocation, distance);
             
+            
+
         }
 
         if (transform.position == TargetLocation)
@@ -39,7 +44,7 @@ public class EnemyAI : MonoBehaviour
         
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         HP = HP - damage;
     }
@@ -47,6 +52,7 @@ public class EnemyAI : MonoBehaviour
     public void SetTarget(Vector3 target)
     {
         TargetLocation = target;
+        TargetLocation.y = 1;
         destinationFound = false;
     }
 
