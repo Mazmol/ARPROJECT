@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class StartMenu : MonoBehaviour
+public class LevelSelect : MonoBehaviour
 {
-      public void Level1()
+    public void Level1()
     {
         SceneManager.LoadScene(1);
         Debug.Log("Loading 1");
