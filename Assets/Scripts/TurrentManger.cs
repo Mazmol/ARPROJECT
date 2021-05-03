@@ -7,6 +7,10 @@ public class TurrentManger : MonoBehaviour
     public LayerMask clickMask;
     public GameObject[,] gridMatrix;
     public GameObject prefab;
+    public int cost;
+    public int cap;
+    private int built;
+    private CashManager bank;
     
     // Start is called before the first frame update
     void Start()
@@ -25,9 +29,11 @@ public class TurrentManger : MonoBehaviour
             if (Physics.Raycast(ray, out hit,500f,clickMask)) {
                clickPostion = hit.point;
                {
-                   if (Input.GetMouseButtonDown(0))
+                   if (Input.GetMouseButtonDown(0) && built <= cap && bank.GetCoins() >= cost)
                    {
                        Instantiate(prefab,hit.point, transform.rotation); // Comment add a fixed hight and prefab
+                        bank.SpendCoin(cost);
+                       built++;
 
                    }
                } 

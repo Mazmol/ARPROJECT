@@ -10357,6 +10357,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   prefab: {fileID: 5580989646719992551, guid: 19a5ffaa530a39742a14ad0ce54d1e1b, type: 3}
+  cap: 10
 --- !u!1 &1985537706
 GameObject:
   m_ObjectHideFlags: 0

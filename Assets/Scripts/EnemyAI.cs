@@ -13,11 +13,18 @@ public class EnemyAI : MonoBehaviour
     public bool flying = false;
     public bool alive = true;
 
+  
+
     
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    private void Awake()
+    {
+       
     }
 
     // Update is called once per frame
