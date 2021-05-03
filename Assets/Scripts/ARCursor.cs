@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.Android;
+
+
 
 public class ARCursor : MonoBehaviour
 {
+    GameObject dialog = null; 
     public GameObject cursorChildObject;
     public GameObject objectToPlace;
     public ARRaycastManager raycastManager;
@@ -15,7 +19,9 @@ public class ARCursor : MonoBehaviour
 
     void Start()
     {
-        cursorChildObject.SetActive(useCursor);
+        cursorChildObject.SetActive(useCursor);  
+        Permission.RequestUserPermission(Permission.Camera);
+        dialog = new GameObject();
     }
 
     void MoveGame()

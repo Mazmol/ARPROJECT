@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7450173683279905247}
   - component: {fileID: 2425826586152625025}
+  - component: {fileID: 2760804820073695846}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Grid
@@ -54,4 +55,23 @@ MonoBehaviour:
   height: 10
   offset: 5
   spacing: 10
+  level: 
   scale: 0.01
+--- !u!114 &2760804820073695846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066396791287804232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5507986ed49c6743ad218b9cd07db48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickMask:
+    serializedVersion: 2
+    m_Bits: 64
+  prefab: {fileID: 5580989646719992551, guid: 19a5ffaa530a39742a14ad0ce54d1e1b, type: 3}
+  cost: 0
+  cap: 10
