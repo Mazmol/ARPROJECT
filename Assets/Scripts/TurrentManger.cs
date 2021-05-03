@@ -20,6 +20,7 @@ public class TurrentManger : MonoBehaviour
     // Update is called once per frame
     void Update(){
             if(Input.GetMouseButtonDown(0)) {
+            Input.simulateMouseWithTouches = true;
             Vector3 clickPostion = -Vector3.one;
            
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
