@@ -20,7 +20,8 @@ public class HP_Manger : MonoBehaviour
     void Update()
     {
          if (gamelost){
-              SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene(2);
+           
          }       
     }
 
