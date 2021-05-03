@@ -59,7 +59,7 @@ public class EnemyAI : MonoBehaviour
     public void SetTarget(Vector3 target)
     {
         TargetLocation = target;
-        TargetLocation.y = 1;
+        TargetLocation.y = 0.001f;
         destinationFound = false;
     }
 

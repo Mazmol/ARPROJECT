@@ -10,7 +10,7 @@ public class TurrentManger : MonoBehaviour
     public int cost;
     public int cap;
     private int built;
-    private CashManager bank;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -29,10 +29,10 @@ public class TurrentManger : MonoBehaviour
             if (Physics.Raycast(ray, out hit,500f,clickMask)) {
                clickPostion = hit.point;
                {
-                   if (Input.GetMouseButtonDown(0) && built <= cap && bank.GetCoins() >= cost)
+                   if (Input.GetMouseButtonDown(0) && built <= cap )
                    {
                        Instantiate(prefab,hit.point, transform.rotation); // Comment add a fixed hight and prefab
-                        bank.SpendCoin(cost);
+               
                        built++;
 
                    }
